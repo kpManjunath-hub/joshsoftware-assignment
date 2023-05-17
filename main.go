@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -26,5 +27,7 @@ func main() {
 	http.HandleFunc("/orders", orderService.PlaceOrder)
 	http.HandleFunc("/orders/update", orderService.UpdateOrderStatus)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	fmt.Println("Server listening on http://localhost:9000")
+
+	log.Fatal(http.ListenAndServe(":9000", nil))
 }
