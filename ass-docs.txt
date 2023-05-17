@@ -1,0 +1,62 @@
+GET PRODUCTS URL : http://localhost:8080/products
+
+RESPONSE:
+{
+    "product1": {
+        "name": "Product 1",
+        "availability": 100,
+        "price": 10,
+        "category": "Premium"
+    },
+    "product2": {
+        "name": "Product 2",
+        "availability": 50,
+        "price": 5,
+        "category": "Regular"
+    },
+    "product3": {
+        "name": "Product 3",
+        "availability": 60,
+        "price": 2,
+        "category": "Budget"
+    }
+}
+
+POST PRODUCTS URL : http://localhost:8080/orders
+
+REQUEST:
+{
+    "orderID": "order123",
+    "productID": "product1",
+    "quantity": 2
+}
+
+
+RESPONSE:
+
+{
+    "orderID": "order123",
+    "productID": "product1",
+    "quantity": 2,
+    "orderValue": 20,
+    "orderStatus": "Placed"
+}
+
+UPDATE PRODUCTS URL : http://localhost:8080/orders/update?orderID=order123
+
+REQUEST:
+
+{
+    "dispatchDate": "2023-05-16"
+}
+
+RESPONSE:
+
+{
+    "orderID": "order123",
+    "productID": "product1",
+    "quantity": 2,
+    "orderValue": 20,
+    "dispatchDate": "2023-05-16",
+    "orderStatus": "Dispatched"
+}
